@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Изменения в строе сложноподчиненного предложения</title>
+		<link type="text/css" rel="stylesheet" href= "{{ url_for('static', filename='stylesheets/style.css') }}" />
+	</head>
+	<body>
+		<div id="title">
+			<a href="/index">Изменения в строе сложноподчиненного предложения</a>
+		</div>
+		<div id="menu">
+			<a href="/index">О проекте</a>
+			<a href="/search">Поиск</a>
+			<a href="/help">Помощь</a>
+			<a href="/resources">Список источников</a>
+		</div>
+		<div id="main">
+			<!--<h1>{{data["info"][0][1]}}</h1>-->
+			<div id="search">
+				<div id="left">
+					{% for i in data["info"][:] %}
+						<div class="element_b">{{i[0]}}:</div>
+					{% endfor %}
+				</div>
+				<div id="right">
+					{% for i in range(0, data["info"]|length -1) %}
+						<div class="element">{{data["info"][i][1]}}</div>
+					{% endfor %}
+					
+					<div class="element"> <a class="page"  href="../static/images/{{data["info"][-1][1]}}.png">{{data["info"][-1][1]}}</a></div>
+
+				</div>
+				<div id="footer"></div>
+			</div>
+			<div id="examples">
+				<h2>Примеры</h2>
+				<hr>
+				<div id="listed">
+					{% for i in data["examples"] %}
+						<p class="element">{{i[0]}}:</p>
+						<p class="example">{{i[1]}}</p>
+					{% endfor %}
+				</div>
+				<hr>
+			</div>
+		</div>
+	</body>
+</html>

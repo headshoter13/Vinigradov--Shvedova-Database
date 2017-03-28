@@ -1,0 +1,24 @@
+{	
+	"mapping": {
+		"properties":{
+			"id_doc" : {"type": "integer"},
+			"page_pdf": {"type": "string"},
+			"page_book": {"type": "string"},
+			"constr_type" : {"type": "string"},
+			"conjunction" : {"type": "string"},
+			"special_word": {"type": "string"},
+			"meaning": {"type": "string"},
+			"meaning_Shvedova": {"type": "string"},
+			"formula": {"type": "string"},
+			"formula_new": {"type": "string"},
+			"year_first_using" : {"type": "integer"},
+			"text_first_using" : {"type": "string"},
+			"year_last_using" : {"type": "integer"},
+			"text_last_using" : {"type": "string"},
+			"other_examples" : {"type": "string"},
+			"comments" : {"type": "string"}
+		}
+		    
+		}
+	    
+	}

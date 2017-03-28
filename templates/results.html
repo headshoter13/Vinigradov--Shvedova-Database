@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Изменения в строе сложноподчиненного предложения</title>
+		<link type="text/css" rel="stylesheet" href= "{{ url_for('static', filename='stylesheets/style.css') }}" />
+	</head>
+	<body>
+		<div id="title">
+			<a href="/index">Изменения в строе сложноподчиненного предложения</a>
+		</div>
+		<div id="menu">
+			<a href="/index">О проекте</a>
+			<a href="/search">Поиск</a>
+			<a href="/help">Помощь</a>
+			<a href="/resources">Список источников</a>
+		</div>
+		<div id="main">
+			<h1>Результаты поиска</h1>
+			<hr>
+			<p class="results"><span>Объём всего корпуса конструкций: </span>{{n_all}}</p>
+			<p class="results"><span>Найдено конструкций: </span>{{n_results}}</p>
+			<hr>
+			<div id="listed">
+				{% for i in data %}
+				<div class="element"><a class="construction"  href="/construction/{{i['id_doc']}}">{{i['id_doc']}}. {{i['constr_type']}}; {{i['meaning']}}; {{i['conjunction']}}</a></div>
+				{% endfor %}
+			</div>
+		</div>
+	</body>
+</html>

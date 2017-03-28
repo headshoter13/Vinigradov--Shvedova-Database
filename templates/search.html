@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Изменения в строе сложнопочиненного предложение</title>
+		<link type="text/css" rel="stylesheet" href= "{{ url_for('static', filename='stylesheets/style.css') }}" />
+	</head>
+	<body>
+		<div id="title">
+			<a href="/index">Изменения в строе сложнопочиненного предложение</a>
+		</div>
+		<div id="menu">
+			<a href="/index">О проекте</a>
+			<a href="/search">Поиск</a>
+			<a href="/help">Помощь</a>
+			<a href="/resources">Список источников</a>
+		</div>
+		<div id="main">
+			<!--<h1>Поиск по конструкциям</h1>-->
+			<div id="search">
+				<form>
+					<!--<input class="line" type="text" name="construction" list="constructions">
+						<datalist id="constructions">
+							{% for i in lists["construction"] %}
+								<option>{{i}}</option>
+							{% endfor %}
+						</datalist>-->
+					<div id="left">
+						<div class="element">Вид конструкции:</div>
+						<div class="element">Значение:</div>
+						<div class="element">Значение по Шведовой:</div>
+						<div class="element">Формула Конструктикон:</div>
+						<div class="element">Совр. формула Конструктикон:</div>
+						<!--<div class="element">Структура:</div>
+						<div class="element">Cтруктура (совр. терминология):</div>-->
+						<div class="element">Союз:</div>
+						<div class="element">Коррелятив:</div>
+						<div class="element">Год первого употребления:</div>
+						<div class="element">Год последнего употребления:</div>
+					</div>
+					<div id="right">
+						<!--<div class="element">
+							<select name="construction_type">
+								<option value="Все" selected>Все</option>
+								<option value="Глагол + существительное">Глагол + существительное</option>
+								<option value="Существительное + существительное">Существительное + существительное</option>
+								<option value="Прилагательное + существительное">Прилагательное + существительное</option>
+							</select>
+						</div>-->
+						<div class="element">
+							<input class="wide" type="text" name="constr_type" list="constr_type">
+								<datalist id="constr_type">
+									{% for i in lists["constr_type"] %}
+										<option>{{i}}</option>
+									{% endfor %}
+								</datalist>
+						</div>
+						<div class="element">
+							<input class="wide" type="text" name="meaning" list="meaning">
+								<datalist id="meaning">
+									{% for i in lists["meaning"] %}
+										<option>{{i}}</option>
+									{% endfor %}
+								</datalist>
+						</div>
+						<div class="element">
+							<input class="wide" type="text" name="meaning_Shvedova" list="meaning_Shvedova">
+								<datalist id="meaning_Shvedova">
+									{% for i in lists["meaning_Shvedova"] %}
+										<option>{{i}}</option>
+									{% endfor %}
+								</datalist>
+						</div>
+						<div class="element">
+							<input class="wide" type="text" name="formula" list="formula">
+								<datalist id="formula">
+									{% for i in lists["formula"] %}
+										<option>{{i}}</option>
+									{% endfor %}
+								</datalist>
+						</div>
+						<div class="element">
+							<input class="wide" type="text" name="formula_new" list="formula_new">
+								<datalist id="formula_new">
+									{% for i in lists["formula_new"] %}
+										<option>{{i}}</option>
+									{% endfor %}
+								</datalist>
+						</div>
+						<!--<div class="element">
+							<input class="wide" type="text" name="Structure" list="Structure">
+								<datalist id="Structure">
+									{% for i in lists["Structure"] %}
+										<option>{{i}}</option>
+									{% endfor %}
+								</datalist>
+						</div>
+						<div class="element">
+							<input class="wide" type="text" name="Structure_new" list="Structure_new">
+								<datalist id="Structure_new">
+									{% for i in lists["Structure_new"] %}
+										<option>{{i}}</option>
+									{% endfor %}
+								</datalist>
+						</div>-->
+						<div class="element">
+							<input class="wide" type="text" name="conjunction" list="conjunction">
+								<datalist id="conjunction">
+									{% for i in lists["conjunction"] %}
+										<option>{{i}}</option>
+									{% endfor %}
+								</datalist>
+						</div>
+						<div class="element">
+							<input class="wide" type="text" name="special_word" list="special_word">
+								<datalist id="special_word">
+									{% for i in lists["special_word"] %}
+										<option>{{i}}</option>
+									{% endfor %}
+								</datalist>
+						</div>
+						<div class="element">
+							<input type="text" name="year_first_1" autocomplete="off"> – <input type="text" name="year_first_2"  autocomplete="off">
+						</div>
+						<div class="element">
+							<input type="text" name="year_last_1" autocomplete="off"> – <input type="text" name="year_last_2" autocomplete="off">
+						</div>
+					</div>
+					<div id="line">
+						<input id="button" type="submit" name="find" value="Поиск">
+					</div>
+				</form>
+			</div>
+		</div>
+	
+	</body>
+</html>
